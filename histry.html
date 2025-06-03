@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>histry topics Topics</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+    <label for="check" id="checkbtn_cross"><i class="fa-solid fa-xmark"></i></label>
+    <label class="logo"><b>LearnWithPrathamesh.in</b></label>
+    <UL>
+      <LI><a class="active" href="index.html">home </a></LI>
+      <LI><a href="about_us.html">About us </a></LI>
+      <LI><a href="contact_us.html">contact us </a></LI>
+    </UL>
+  </nav>
+  <br>
+  <div class="content">
+    <h1>इतिहास</h1>
+    <div class="button-container">
+      <button onclick="goToQuiz('pragaitihasik_kal')">1. प्रागैतिहासिक काल</button>
+      <button onclick="goToQuiz('sindhu_sabhyata')">2. सिंधु सभ्यता</button>
+      <button onclick="goToQuiz('vaidik_sabhyata_1')">3. वैदिक सभ्यता 1</button>
+      <button onclick="goToQuiz('vaidik_sabhyata_2')">4. वैदिक सभ्यता 2</button>
+      <button onclick="goToQuiz('jain_dharm_1')">5. जैन धर्म 1</button>
+      <button onclick="goToQuiz('baudhd_dharm_1')">6. बौद्ध धर्म 1</button>
+      <button onclick="goToQuiz('baudhd_dharm_2')">7. बौद्ध धर्म 2</button>
+      <button onclick="goToQuiz('vaishnav_dharm')">8. वैष्णव धर्म 1</button>
+      <button onclick="goToQuiz('esalam_dharm_1')">9. इस्लाम धर्म 1</button>
+      <button onclick="goToQuiz('shaiv_dharm_1')">10. शैव धर्म 1</button>
+      <button onclick="goToQuiz('rigved_1')">11. ऋग्वेद 1</button>
+      <button onclick="goToQuiz('yajurved_1')">12. यजुर्वेद 1</button>
+      <button onclick="goToQuiz('samved_1')">`13. सामवेद 1</button>
+      <button onclick="goToQuiz('atharvaved_1')">14. अथर्ववेद 1</button>
+      <button onclick="goToQuiz('esae_dharm_1')">15. ईसाई धर्म 1</button>
+    </div>
+  </div>
+  <script>
+    function goToQuiz(topic) {
+      window.location.href = `${topic}.html`;
+    }
+  </script>
+</body>
+
+</html>
