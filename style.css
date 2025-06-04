@@ -135,7 +135,7 @@ nav ul li a.active,a:hover{
       display: block;
   }
 
-  #checkbtn:checked,#checkbtn{
+  #checkbtn:checked ~ #checkbtn{
   
     display: non;
 }
