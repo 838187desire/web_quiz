@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>histry topics Topics</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+    <label for="check" id="checkbtn_cross"><i class="fa-solid fa-xmark"></i></label>
+    <label class="logo"><b>LearnWithPrathamesh.in</b></label>
+    <UL>
+      <LI><a class="active" href="index.html">home </a></LI>
+      <LI><a href="about_us.html">About us </a></LI>
+      <LI><a href="contact_us.html">contact us </a></LI>
+    </UL>
+  </nav>
+  <br>
+  <div class="content">
+    <h1>इतिहास</h1>
+    <div class="button-container">
+      <button onclick="goToQuiz('pragaitihasik_kal_1')">1. प्रागैतिहासिक काल 1</button>
+      <button onclick="goToQuiz('pragaitihasik_kal_2')">1. प्रागैतिहासिक काल 2</button>
+      <button onclick="goToQuiz('pragaitihasik_kal_3')">1. प्रागैतिहासिक काल 3</button>
+      <button onclick="goToQuiz('pragaitihasik_kal_4')">1. प्रागैतिहासिक काल 4</button>
+      <button onclick="goToQuiz('pragaitihasik_kal_5')">1. प्रागैतिहासिक काल 5</button>
+      <button onclick="goToQuiz('pragaitihasik_kal_6')">1. प्रागैतिहासिक काल 6</button>
+      <button onclick="goToQuiz('pragaitihasik_kal_7')">1. प्रागैतिहासिक काल 7</button>
+      <button onclick="goToQuiz('pragaitihasik_kal_8')">1. प्रागैतिहासिक काल 8</button>
+      <button onclick="goToQuiz('pragaitihasik_kal_9')">1. प्रागैतिहासिक काल 9</button>
+      <button onclick="goToQuiz('pragaitihasik_kal_10')">1. प्रागैतिहासिक काल 10</button>
+
+      <button onclick="goToQuiz('sindhu_sabhyata_1')">2. सिंधु सभ्यता 1</button>
+      <button onclick="goToQuiz('sindhu_sabhyata_2')">2. सिंधु सभ्यता 2</button>
+      <button onclick="goToQuiz('sindhu_sabhyata_3')">2. सिंधु सभ्यता 3</button>
+      <button onclick="goToQuiz('sindhu_sabhyata_4')">2. सिंधु सभ्यता 4</button>
+
+      <button onclick="goToQuiz('vaidik_sabhyata_1')">3. वैदिक सभ्यता 1</button>
+      <button onclick="goToQuiz('vaidik_sabhyata_2')">4. वैदिक सभ्यता 2</button>
+      <button onclick="goToQuiz('vaidik_sabhyata_3')">4. वैदिक सभ्यता 3</button>
+      <button onclick="goToQuiz('vaidik_sabhyata_4')">4. वैदिक सभ्यता 4</button>
+
+      <button onclick="goToQuiz('maha_janpad0_ka_uday_1')">4. महाजनपदों का उदय 1</button>
+      <button onclick="goToQuiz('maha_janpad0_ka_uday_2')">4. महाजनपदों का उदय 2</button>
+
+      <button onclick="goToQuiz('jain_dharm_1')">5. जैन धर्म 1</button>
+      <button onclick="goToQuiz('jain_dharm_2')">5. जैन धर्म 2</button>
+
+      <button onclick="goToQuiz('baudhd_dharm_1')">6. बौद्ध धर्म 1</button>
+      <button onclick="goToQuiz('baudhd_dharm_2')">7. बौद्ध धर्म 2</button>
+      <button onclick="goToQuiz('baudhd_dharm_3')">7. बौद्ध धर्म 3</button>
+      <button onclick="goToQuiz('baudhd_dharm_4')">7. बौद्ध धर्म 4</button>
+
+      <button onclick="goToQuiz('vaishnav_dharm_1')">8. वैष्णव धर्म 1</button>
+      <button onclick="goToQuiz('vaishnav_dharm_2')">8. वैष्णव धर्म 2</button>
+      <button onclick="goToQuiz('vaishnav_dharm_3')">8. वैष्णव धर्म 3</button>
+      <button onclick="goToQuiz('vaishnav_dharm_4')">8. वैष्णव धर्म 4</button>
+
+      <button onclick="goToQuiz('esalam_dharm_1')">9. इस्लाम धर्म 1</button>
+      <button onclick="goToQuiz('esalam_dharm_2')">9. इस्लाम धर्म 2</button>
+      <button onclick="goToQuiz('esalam_dharm_3')">9. इस्लाम धर्म 3</button>
+      <button onclick="goToQuiz('esalam_dharm_4')">9. इस्लाम धर्म 4</button>
+
+      <button onclick="goToQuiz('shaiv_dharm_1')">10. शैव धर्म 1</button>
+      <button onclick="goToQuiz('shaiv_dharm_2')">10. शैव धर्म 2</button>
+      <button onclick="goToQuiz('shaiv_dharm_3')">10. शैव धर्म 3</button>
+      <button onclick="goToQuiz('shaiv_dharm_4')">10. शैव धर्म 4</button>
+
+      <button onclick="goToQuiz('rigved_1')">11. ऋग्वेद 1</button>
+      <button onclick="goToQuiz('rigved_2')">11. ऋग्वेद 2</button>
+
+      <button onclick="goToQuiz('yajurved_1')">12. यजुर्वेद 1</button>
+      <button onclick="goToQuiz('yajurved_2')">12. यजुर्वेद 2</button>
+
+      <button onclick="goToQuiz('samved_1')">`13. सामवेद 1</button>
+      <button onclick="goToQuiz('samved_2')">`13. सामवेद 2</button>
+
+      <button onclick="goToQuiz('atharvaved_1')">14. अथर्ववेद 1</button>
+      <button onclick="goToQuiz('atharvaved_2')">14. अथर्ववेद 2</button>
+
+      <button onclick="goToQuiz('esae_dharm_1')">15. ईसाई धर्म 1</button>
+      <button onclick="goToQuiz('esae_dharm_2')">15. ईसाई धर्म 2</button>
+      <button onclick="goToQuiz('esae_dharm_3')">15. ईसाई धर्म 3</button>
+      <button onclick="goToQuiz('esae_dharm_4')">15. ईसाई धर्म 4</button>
+
+      <button onclick="goToQuiz('parasi_dharma_1')">15.पारसी धर्म 1</button>
+      <button onclick="goToQuiz('parasi_dharma_2')">15.पारसी धर्म 2</button>
+      <button onclick="goToQuiz('parasi_dharma_3')">15.पारसी धर्म 3</button>
+      <button onclick="goToQuiz('parasi_dharma_4')">15.पारसी धर्म 4</button>
+
+      <button onclick="goToQuiz('magadh_samrajya_ka_utkarsh_1')">15. मगध राज्य का उत्कर्ष 1</button>
+      <button onclick="goToQuiz('magadh_samrajya_ka_utkarsh_2')">15. मगध राज्य का उत्कर्ष 2</button>
+      <button onclick="goToQuiz('magadh_samrajya_ka_utkarsh_3')">15. मगध राज्य का उत्कर्ष 3</button>
+      <button onclick="goToQuiz('magadh_samrajya_ka_utkarsh_4')">15. मगध राज्य का उत्कर्ष 4</button>
+
+      <button onclick="goToQuiz('sikandar_1')">15. सिकंदर(अलेक्जेंडर) 1</button>
+      <button onclick="goToQuiz('sikandar_2')">15. सिकंदर(अलेक्जेंडर) 2</button>
+      <button onclick="goToQuiz('sikandar_3')">15. सिकंदर(अलेक्जेंडर) 3</button>
+      <button onclick="goToQuiz('sikandar_4')">15. सिकंदर(अलेक्जेंडर) 4</button>
+
+      <button onclick="goToQuiz('maurya_samrajy_1')">15. मौर्य साम्राज्य 1</button>
+      <button onclick="goToQuiz('maurya_samrajy_2')">15. मौर्य साम्राज्य 2</button>
+      <button onclick="goToQuiz('maurya_samrajy_3')">15. मौर्य साम्राज्य 3</button>
+      <button onclick="goToQuiz('maurya_samrajy_4')">15. मौर्य साम्राज्य 4</button>
+
+      <button onclick="goToQuiz('bramhan_samrajy_1')">15. ब्राह्मण साम्राज्य 1</button>
+      <button onclick="goToQuiz('bramhan_samrajy_2')">15. ब्राह्मण साम्राज्य 2</button>
+      <button onclick="goToQuiz('bramhan_samrajy_3')">15. ब्राह्मण साम्राज्य 3</button>
+      <button onclick="goToQuiz('bramhan_samrajy_4')">15. ब्राह्मण साम्राज्य 4</button>
+
+      <button onclick="goToQuiz('bharat_ke_yavan_rajy_1')">15. भारत के यवनराज्य 1</button>
+      <button onclick="goToQuiz('bharat_ke_yavan_rajy_2')">15. भारत के यवनराज्य 2</button>
+      <button onclick="goToQuiz('bharat_ke_yavan_rajy_3')">15. भारत के यवनराज्य 3</button>
+      <button onclick="goToQuiz('bharat_ke_yavan_rajy_4')">15. भारत के यवनराज्य 4</button>
+
+      <button onclick="goToQuiz('shak_samrajy_1')">15. शक साम्राज्य 1</button>
+      <button onclick="goToQuiz('shak_samrajy_2')">15. शक साम्राज्य 2</button>
+      
+      <button onclick="goToQuiz('kushan_samrajy_1')">15. कुषाण साम्राज्य 1</button>
+      <button onclick="goToQuiz('kushan_samrajy_2')">15. कुषाण साम्राज्य 2</button>
+
+      <button onclick="goToQuiz('gupt_samrajy_1')">15. गुप्त साम्राज्य 1</button>
+      <button onclick="goToQuiz('gupt_samrajy_2')">15. गुप्त साम्राज्य 2</button>
+      <button onclick="goToQuiz('gupt_samrajy_3')">15. गुप्त साम्राज्य 3</button>
+      <button onclick="goToQuiz('gupt_samrajy_4')">15. गुप्त साम्राज्य 4</button>
+      <button onclick="goToQuiz('pusyabhuti_ya_vardhan_vansh_1')">15. पुष्यभूति वंश या वर्धन वंश 1 </button>
+      <button onclick="goToQuiz('pusyabhuti_ya_vardhan_vansh_2')">15. पुष्यभूति वंश या वर्धन वंश 2</button>
+      <button onclick="goToQuiz('pusyabhuti_ya_vardhan_vansh_3')">15. पुष्यभूति वंश या वर्धन वंश 3 </button>
+      <button onclick="goToQuiz('pusyabhuti_ya_vardhan_vansh_4')">15. पुष्यभूति वंश या वर्धन वंश 4 </button>
+
+      <button onclick="goToQuiz('dakshin_bharat_ke_pramukh_rajvansh_1')">15. दक्षिण भारत के प्रमुख राजवंश 1</button>
+      <button onclick="goToQuiz('dakshin_bharat_ke_pramukh_rajvansh_2')">15. दक्षिण भारत के प्रमुख राजवंश 2</button>
+      <button onclick="goToQuiz('dakshin_bharat_ke_pramukh_rajvansh_3')">15. दक्षिण भारत के प्रमुख राजवंश 3</button>
+      <button onclick="goToQuiz('dakshin_bharat_ke_pramukh_rajvansh_4')">15. दक्षिण भारत के प्रमुख राजवंश 4</button>
+
+      <button onclick="goToQuiz('pallav_vansh_1')">15. पल्लव वंश 1</button>
+      <button onclick="goToQuiz('pallav_vansh_2')">15. पल्लव वंश 2</button>
+
+      <button onclick="goToQuiz('rastrakut_samrajy_1')">15. राष्ट्रकूट साम्राज्य 1</button>
+      <button onclick="goToQuiz('rastrakut_samrajy_2')">15. राष्ट्रकूट साम्राज्य 2</button>
+
+      <button onclick="goToQuiz('chaluky_vansh_1')">15. चालुक्य वंश 1</button>
+      <button onclick="goToQuiz('chaluky_vansh_2')">15. चालुक्य वंश 2</button>
+
+      <button onclick="goToQuiz('chol_vansh_1')">15. चोल वंश 1</button>
+      <button onclick="goToQuiz('chol_vansh_2')">15. चोल वंश 2</button>
+
+      <button onclick="goToQuiz('yadav_vansh_1')">15. यादव वंश 1</button>
+      <button onclick="goToQuiz('yadav_vansh_2')">15. यादव वंश 2</button>
+
+      
+
+    </div>
+  </div>
+  <script>
+    function goToQuiz(topic) {
+      window.location.href = `${topic}.html`;
+    }
+  </script>
+</body>
+
+</html>
