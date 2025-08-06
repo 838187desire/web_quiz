@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+    <label for="check" id="checkbtn_cross"><i class="fa-solid fa-xmark"></i></label>
+    <label class="logo"><b>LearnWithPrathamesh.in</b></label>
+    <UL>
+      <LI><a class="active" href="index.html">home </a></LI>
+      <LI><a href="about_us.html">About us </a></LI>
+      <LI><a href="contact_us.html">contact us </a></LI>
+    </UL>
+</nav>
+<br>
+  <div class="content">
+    <h1>Select your choice</h1>
+    <div class="button-container">
+      <button onclick="goToSubject('histry')">Play Quiz</button>
+      <button onclick="goToSubject('histry_study_material_index')">Study Material</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
