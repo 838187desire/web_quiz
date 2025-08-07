@@ -190,8 +190,8 @@ function createComplainBox() {
   complainButton.innerHTML = "Complain";
 
   complainButton.onclick = function () {
-      const message = encodeURIComponent("Write your doubt and send :");
-      window.location.href = `https://wa.me/message/UTAYXAFE2W3JG1${message}`;
+      
+      window.location.href = "https://wa.me/message/UTAYXAFE2W3JG1";
   };
   
   complainBox.appendChild(complainButton);
@@ -200,4 +200,5 @@ function createComplainBox() {
   quizContainer.appendChild(complainBox);
 }
 startQuiz();
+
 
