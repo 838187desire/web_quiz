@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,html{
+  width: 100%;
+  height: 100;
+}
+
+.contact_us_page{
+  margin-top: 40px;
+  height: 100vh;
+  background-image: url('imageforindex_1.jpeg');
+  background-size:cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.contact_us_page h1{
+  color: rgb(255, 255, 255);
+  padding-top: 5px;
+  text-align: center;
+}
+
+.contact_us{
+  padding: 20px;
+  color: rgb(252, 251, 251);
+  font-size: 25px;
+}
+
+@media (max-width:400px) {
+  .contact_us_page h1{
+    font-size: 25px;
+  }
+  .contact_us{
+    font-size: 20px;
+  }
+}
