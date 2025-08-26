@@ -70,6 +70,12 @@
    border: 2px solid rgb(8, 186, 236);
   }
 
+ @media (max-width:450px) {
+    .btn:hover {
+      border: 2px solid rgb(126, 129, 130);
+    }
+  }
+
   @media (max-width:400px) {
     .btn{
       padding: 5px;
@@ -195,6 +201,7 @@
       font-size: 15px;
     }
   }
+
 
 
 
