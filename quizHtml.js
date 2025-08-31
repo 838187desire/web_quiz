@@ -12,7 +12,7 @@ root.innerHTML = `
         <label for="check" class="overlay"></label>
       
         <ul>
-          <li><a class="navBarAnchor" href="../../frontPage.html">Home</a></li>
+          <li><a class="navBarAnchor" href="../../index.html">Home</a></li>
           <li><a class="navBarAnchor" href="../../about_us.html">About Us</a></li>
           <li><a class="navBarAnchor" href="../../contact_us.html">Contact Us</a></li>
           <li class="motivation">
@@ -42,4 +42,5 @@ root.innerHTML = `
       <button id="doubtBtn">Do you have any doubt?</button><br>
     </div>
   </div>
+
 `;
