@@ -1,0 +1,238 @@
+/* --- Import Google Font for a modern look --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* --- Keyframes for Animations --- */
+@keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes incorrect-wobble {
+    from, to { transform: translateX(0) rotate(0); }
+    20% { transform: translateX(-6px) rotate(-3deg); }
+    40% { transform: translateX(6px) rotate(3deg); }
+    60% { transform: translateX(-6px) rotate(-3deg); }
+    80% { transform: translateX(6px) rotate(3deg); }
+}
+
+@keyframes correct-hop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* --- :root for modern CSS Variables --- */
+:root {
+    --glow-color-1: #2dd4bf; /* Teal */
+    --glow-color-2: #8b5cf6; /* Purple */
+    --glow-color-3: #2dd4bf; /* Pink */
+    --border-color: #3730a3;
+    --text-secondary: #c7d2fe;
+}
+
+/* --- Universal Reset - Kept original structure --- */
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+    box-sizing: border-box;
+}
+
+/* --- Body with a deep space background --- */
+body {
+    background: #0d0f18;
+    color: #e0e7ff; 
+}
+
+/* --- App Container - Unchanged --- */
+.app {
+    background-color: rgba(22, 25, 33, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(135deg, var(--glow-color-1), var(--glow-color-2), var(--glow-color-3)) 1;
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+@media (max-width: 850px) {
+    .app {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 450px) {
+    .app {
+        width: 95%;
+    }
+}
+
+/* --- Headings and Text - Unchanged --- */
+.app h3 {
+    color: #f0f0f0;
+    font-weight: 600;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, var(--glow-color-1), #a78bfa, var(--glow-color-3)) 1;
+    padding-bottom: 10px;
+}
+.quiz h2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+}
+@media (max-width: 400px) {
+    .app h3 { font-size: 15px; }
+    .quiz h2 { font-size: 18px; }
+}
+
+/* --- ADVANCED Button Styling with Shimmer Effect --- */
+.btn {
+    position: relative;
+    background-color: rgba(49, 46, 73, 0.4);
+    color: white;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid #543460;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: skewX(-25deg);
+    transition: left 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn:hover:not([disabled]) {
+    color: #ffffff;
+    border-color: var(--glow-color-2);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.btn:hover:not([disabled])::before {
+    left: 125%;
+}
+
+.btn:active:not([disabled]) {
+    transform: translateY(0) scale(0.99);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+  @media (max-width: 450px) {
+    .btn:hover:not([disabled]) {
+    color: #ffffff;
+    border-color: #543460;
+    transform: translateY(-2px);
+    /* box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); */
+}
+
+.btn:active:not([disabled]) {
+    /* transform: translateY(0) scale(0.99); */
+    /* box-shadow: 0 0 10px rgba(139, 92, 246, 0.3); */
+}
+
+}  
+
+
+
+@media (max-width: 400px) {
+    .btn {
+        padding: 5px;
+        font-weight: 400;
+    }
+}
+
+.btn:disabled {
+    cursor: no-drop;
+    
+    background-color: #1e1b34;
+}
+
+/* --- Correct / Incorrect States with NEW Animations --- */
+.correct {
+    background: #15803d;
+    color: white;
+    border-color: #4ade80;
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.5);
+    animation: correct-hop 0.5s ease;
+}
+.incorrect {
+    background: #be123c;
+    color: white;
+    border-color: #fb7185;
+    box-shadow: 0 0 15px rgba(251, 113, 133, 0.5);
+    animation: incorrect-wobble 0.5s ease;
+}
+
+/* FIX: This hides the shimmer overlay once an answer is selected, ensuring the text is bright. */
+.correct::before,
+.incorrect::before {
+    display: none;
+}
+
+.icon {
+    color: #a78bfa;
+}
+
+/* --- Primary Action Buttons - Unchanged --- */
+#nextBtn, #prevBtn, #doubtBtn, #complainBtn {
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+#nextBtn:hover, #prevBtn:hover, #doubtBtn:hover, #complainBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+#nextBtn, #doubtBtn {
+    color: #ffffff;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--glow-color-1) 0%, var(--glow-color-2) 50%, var(--glow-color-3) 100%);
+    background-size: 200% auto;
+    animation: gradient-flow 3s linear infinite;
+}
+#nextBtn:hover, #doubtBtn:hover {
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+#prevBtn, #complainBtn {
+    background-color: #312e49;
+    color: #c7d2fe;
+    font-weight: 500;
+}
+#prevBtn:hover, #complainBtn:hover {
+    background-color: #4338ca;
+}
+
+/* --- Structural Rules - All Unchanged --- */
+#nextBtn { font-size: 20px; width: 150px; padding: 10px; margin-left: auto; border-radius: 4px; display: none; }
+#prevBtn { font-size: 20px; width: 150px; padding: 10px; border-radius: 4px; display: none; }
+#doubtBtn { font-size: 20px; padding: 5px; width: 80%; margin-left: 10%; display: none; border-radius: 5px; }
+#complainBtn { padding: 5px; font-size: 20px; width: 80%; margin-left: 10%; border-radius: 4px; }
+@media (max-width: 400px) {
+    #nextBtn { width: 40%; font-size: 15px; }
+    #prevBtn { width: 40%; font-size: 15px; }
+    #doubtBtn { font-size: 15px; margin-left: 10%; }
+    #complainBtn { font-size: 15px; }
+}
