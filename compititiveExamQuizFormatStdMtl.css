@@ -190,9 +190,9 @@ input[type="radio"] {
 }
 
 .btn.ghost {
-    background: transparent;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
     border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--muted);
+    color:white;
     font-weight: 600;
 }
 
@@ -234,4 +234,5 @@ input[type="radio"] {
     .grid {
         grid-template-columns: 1fr 1fr;
     }
+
 }
