@@ -197,7 +197,7 @@ function createComplainBox() {
 
   complainButton.onclick = function () {
    
-      window.location.href = "https://wa.me/message/UTAYXAFE2W3JG1";
+      window.location.href = "https://wa.me/qr/AKITGK7CLPOBO1";
   };
   
   complainBox.appendChild(complainButton);
@@ -206,3 +206,4 @@ function createComplainBox() {
   quizContainer.appendChild(complainBox);
 }
 startQuiz();
+
