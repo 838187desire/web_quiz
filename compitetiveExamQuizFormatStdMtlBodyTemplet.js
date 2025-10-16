@@ -17,10 +17,35 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
           </header>
           <main class="grid" id="questionsGrid"></main>
+          <br>
+          <button id="doubtBtn">Do you have any doubt?</button><br>
         </div>
       </div>
     `;
 
-    // Append at the end of body
-    document.body.insertAdjacentHTML("beforeend", mainContainer);
+    
+document.body.insertAdjacentHTML("beforeend", mainContainer);
+
+    // Find the doubt button after it's been added to the page
+    const doubtButton = document.getElementById("doubtBtn");
+
+    // --- MODIFICATION START ---
+    // Add a click listener to the button to handle the toggle logic
+    doubtButton.addEventListener("click", function () {
+        // Check if the complain box already exists on the page
+        const complainBox = document.getElementById("complain_box");
+
+        if (complainBox) {
+            // If it exists, toggle its visibility
+            if (complainBox.style.display === "none") {
+                complainBox.style.display = "block"; // Make it visible
+            } else {
+                complainBox.style.display = "none"; // Make it hidden
+            }
+        } else {
+            // If it doesn't exist, create it for the first time
+            createComplainBox();
+        }
+    });
+    // --- MODIFICATION END ---
 });
