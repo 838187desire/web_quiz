@@ -1,133 +1,234 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body,html{
-  width: 100%;
-  height: 100;
-  
+/* GLOBAL RESET AND BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Smooth transitions for all elements */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s;
 }
 
+body,
+html {
+    width: 100%;
+    background-color: #0d1117; 
+    color: #c9d1d9; 
+    min-height: 100vh;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+/* LANDING PAGE CONTAINER */
+.landing_page {
+    padding: 40px 0;
+    background-color: #0d1117;
+    background-image: radial-gradient(circle at top left, #1f4068 0%, transparent 40%),
+                      radial-gradient(circle at bottom right, #162447 0%, transparent 50%);
+    min-height: 100vh;
+}
+
+.landing_page h1 {
+    color: #4cd1e5; /* Primary Accent: Aqua Blue */
+    text-align: center;
+    padding-top: 20px;
+    font-size: 3em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(76, 209, 229, 0.7);
+    margin-bottom: 50px;
+}
+
+/* BUTTONS CONTAINER */
 .button-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    flex-wrap: wrap;
+    margin-bottom: 60px;
 }
 
-
-
-@media(max-width:850px){
-     button{
-      width: 80%;
-     }
+/* BASE BUTTON STYLE (UNIVERSITY PREP - HIGH VISIBILITY) */
+.landing_page_button {
+    padding: 20px 30px;
+    font-size: 1.25em; /* Increased size */
+    font-weight: 700;
+    background-color: #2b3a55; /* Solid, darker background */
+    border: 3px solid #54a0ff; /* Thicker, brighter border */
+    color: #f1f1f1;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 350px; 
+    letter-spacing: 1px;
+    /* Stronger, more prominent shadow for depth and clickability */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
-
-@media(max-width:511px){
-  button{
-    width: 80%;
-  }
-}
-
-/* css for landing page infi_container */
-
-.landing_page{
-  margin-top: 40px;
-  height: 100%;
-  background-image: url('imageforindex_3.jpeg');
- 
-  background-size:cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  padding-top: .5px;
-}
-
-.landing_page h1{
-  color: white;
-  text-align: center;
-  padding-top: 5px;
-}
-
-.landing_page_button{
-  padding: 30px 40px;
-  font-size: 26px;
-  font-weight: 800;   
-   background-color: transparent; 
-   border: 2px solid rgb(7, 105, 132); 
-  color: rgb(244, 247, 245); 
-  border-radius: 5px;
-  cursor: pointer;
-  width: 225px;
-} 
 
 .landing_page_button:hover {
-  border: 2px solid goldenrod;
+    background-color: #54a0ff; /* FULL COLOR fill on hover */
+    color: #0d1117;
+    border-color: #54a0ff;
+    /* Move up and scale for a strong "press me" feel */
+    transform: translateY(-5px) scale(1.03); 
+    box-shadow: 0 15px 30px rgba(84, 160, 255, 0.8); /* Stronger glow on hover */
+}
+
+/* === UNIVERSAL SPINNING BORDER FIX (COMPETITIVE EXAM BUTTON) === */
+
+/* 1. Wrapper to hold the rotating element */
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 4px; /* Space for the rotation */
+    border-radius: 16px; /* Outer corner radius */
+    width: 350px; 
+    overflow: hidden; /* CRUCIAL: Masks the rotating square to fit the rounded corners */
+}
+
+/* 2. The Rotating Element (::before) - UNIVERSAL FALLBACK */
+.button-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* Strong, contrasting gradient for the effect */
+    background: conic-gradient(
+        transparent 0%, 
+        #4cd1e5 45%, /* Aqua Blue */
+        #54a0ff 55%, /* Light Blue */
+        transparent 100%
+    );
+    z-index: -2;
+    animation: universalRotate 4s linear infinite;
+    filter: drop-shadow(0 0 12px rgba(76, 209, 229, 1)); /* Intense glow */
+}
+
+/* 3. Animation Keyframes */
+@keyframes universalRotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 4. Style for the Animated Button to hide the gradient's center */
+.landing_page_button--animated {
+    /* Resets for the animated button */
+    border: none !important; /* MUST REMOVE BORDER */
+    background-color: #121c2c; /* Very dark background */
+    color: #4cd1e5; /* Text color matching the rotating border */
+    position: relative; /* Essential for z-index */
+    z-index: 1; /* Ensures the button is over the rotating element */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+.landing_page_button--animated:hover {
+    background-color: #1e2a38;
+    color: #f1f1f1;
+    transform: scale(1.02); 
+    box-shadow: 0 0 25px rgba(76, 209, 229, 0.5);
 }
 
 
-.info_container{
-  margin: 15px 15px 0px 15px;
-  /* background-color: aqua; */
-  font-size: 25px;
-  color: rgb(253, 252, 252);
+/* INFO CONTAINER (GLASS MORPHISM SECTION) */
+.info_container {
+    margin: 40px auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 1200px;
+    /* Glassmorphism Effect */
+    background: rgba(30, 41, 59, 0.4); 
+    border-radius: 16px;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.45); /* Stronger shadow */
+    backdrop-filter: blur(12px); /* Stronger blur */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    color: #e0e0e0;
 }
 
 .info_container h2 {
-  color: aqua;
+    color: #54a0ff;
+    text-align: center;
+    font-size: 2.2em; /* Slightly larger */
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(84, 160, 255, 0.5);
 }
 
-.info_container h3 {
-  color: chartreuse;
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
 }
 
-@media (max-width:400px) {
-  .info_container p{
-    font-size: 15px;
-  }
-  .info_container h2 {
-    font-size: 20px;
+.feature-card {
+    padding: 30px; /* More padding */
+    background: rgba(45, 61, 85, 0.5); 
+    border-radius: 12px;
+    border-left: 6px solid #4cd1e5; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transform: translateZ(0); /* Performance boost */
+}
 
-  }
-  .info_container h3 {
-    font-size: 15px;
-  }
+.feature-card h3 {
+    color: #4cd1e5; 
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.feature-card p {
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+.footer {
+    background-color: transparent;
+    color: #586980;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #1f2a38;
+    margin-top: 50px;
 }
 
 
-@media(max-width:850px){
-  .landing_page_button{
-    width: 225px;
-    padding: 15px 0px;
-    font-size: 20px;
-  }
+/* === MEDIA QUERIES FOR RESPONSIVENESS === */
+
+@media (max-width: 992px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-@media(max-width:480px){
-  .landing_page_button{
-    width: 150px;
-    padding: 15px 0px;
-  }
+@media (max-width: 768px) {
+    .landing_page h1 {
+        font-size: 2.2em;
+    }
+    .landing_page_button, .button-wrapper {
+        width: 85%; /* Better stacking on smaller devices */
+        max-width: 350px; 
+        font-size: 1.1em;
+        padding: 18px 25px;
+    }
+    .info_container {
+        padding: 30px 20px;
+    }
 }
 
-@media(max-width:400px){
-  .landing_page_button{
-    width: 80%;
-    padding: 10pxpx 0px;
-  }
+@media (max-width: 500px) {
+    .landing_page h1 {
+        font-size: 1.8em;
+    }
+    .landing_page_button, .button-wrapper {
+        font-size: 1em;
+        padding: 15px 10px;
+        
+        background-color: rgb(15, 77, 131);
+        
+    }
+    .landing_page_button_margin{
+      margin-left: 18px;
+    }
+    .info_container {
+        width: 95%;
+    }
 }
-
-@media(max-width:400px) {
-  .landing_page h1{
-    font-size:25px ;
-  }
-}
-
-@media (max-width:850px) {
-  .landing_page{
-    background-image: url('imageforindex_1.jpeg');
-  }
-}
-
