@@ -142,7 +142,7 @@ label.option:hover {
 }
 
 label.option.highlight-correct {
-    border-color: green;
+    border-color: #08e308;
     background-color: rgba(47, 197, 42, 0.15);
     box-shadow: 0 0 10px rgba(71, 243, 4, 0.3);
 }
@@ -217,12 +217,14 @@ input[type="radio"] {
 
 .correct {
     font-weight: 700;
+    font-size: 20px;
     color: var(--accent-2);
 }
 
 .explain {
     margin-top: 8px;
     color: white;
+    font-size: 17px;
 }
 
 .explain .icon {
@@ -276,3 +278,4 @@ input[type="radio"] {
         font-size: 15px;
     }
 }
+
