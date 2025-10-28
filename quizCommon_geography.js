@@ -30,23 +30,26 @@ function showQuestion() {
   let currentQuestion = questions[currentQuestionIndex];
   questionElement.innerHTML = `${currentQuestionIndex }. ${currentQuestion.question}`;
 
-
+ let btn_number = 1;
 
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
-    button.innerText = answer.text;
+    button.innerText ="("+ btn_number+").       ";
+    button.innerText += "    "+answer.text;
     button.classList.add("btn");
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
     button.addEventListener("click", selectAnswer);
     ansBtns.appendChild(button);
+    btn_number++;
   });
 
   explanationElement.innerHTML = `${currentQuestion.Explanation}`;
   explanationElement.style.display = "none";
 }
 
+ btn_number=0. 
 function resetState() {
   nextBtn.style.display = "none";
   ansBtns.innerHTML = "";
@@ -206,4 +209,5 @@ function createComplainBox() {
   quizContainer.appendChild(complainBox);
 }
 startQuiz();
+
 
