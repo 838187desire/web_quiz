@@ -229,10 +229,12 @@ body {
 #nextBtn { font-size: 20px; width: 150px; padding: 10px; margin-left: auto; border-radius: 4px; display: none; }
 #prevBtn { font-size: 20px; width: 150px; padding: 10px; border-radius: 4px; display: none; }
 #doubtBtn { font-size: 20px; padding: 5px; width: 80%; margin-left: 10%; display: none; border-radius: 5px; }
-#complainBtn { padding: 5px; font-size: 20px; width: 80%; margin-left: 10%; border-radius: 4px; }
+#complainBtn { padding: 5px; font-size: 20px; width: 80%; margin-left: 10%; border-radius: 4px;
+              background-image: linear-gradient(to right, var(--glow-color-1) 0%, var(--glow-color-2) 50%, var(--glow-color-3) 100%);}
 @media (max-width: 400px) {
     #nextBtn { width: 40%; font-size: 15px; }
     #prevBtn { width: 40%; font-size: 15px; }
     #doubtBtn { font-size: 15px; margin-left: 10%; }
     #complainBtn { font-size: 15px; }
+
 }
