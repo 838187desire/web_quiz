@@ -3,5 +3,5 @@
 // }
 
 function goToSubject(path) {
-  window.location.href = "/" + path + ".html";
+  window.location.href =  path + ".html";
 }
